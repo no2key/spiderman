@@ -38,7 +38,7 @@ import org.eweb4j.util.xml.XMLReader;
 import org.eweb4j.util.xml.XMLWriter;
 
 
-public class Spiders {
+public class Spiderman {
 
 	public final static SpiderIOC ioc = SpiderIOCs.create();
 	public final static Map<String, Counter> counters = new Hashtable<String, Counter>();
@@ -56,7 +56,7 @@ public class Spiders {
 	
 	public static void start() {
 		for (Site site : sites){
-			pool.execute(new Spiders._Executor(site));
+			pool.execute(new Spiderman._Executor(site));
 			listener.onInfo(Thread.currentThread(), "spider tasks of " + site.getName() + " start... ");
 		}
 	}
