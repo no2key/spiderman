@@ -72,6 +72,9 @@ public class Spider implements Runnable{
 				}
 			}
 			
+			if (newUrls != null && !newUrls.isEmpty())
+				this.listener.onNewUrls(Thread.currentThread(), task, newUrls);
+			
 			//扩展点：dup_removal URL去重,然后变成Task
 			Collection<Task> validTasks = null;
 			Collection<DupRemovalPoint> dupRemovalPoints = task.site.dupRemovalPointImpls;
@@ -81,6 +84,9 @@ public class Spider implements Runnable{
 					validTasks = point.removeDuplicateTask(validTasks);
 				}
 			}
+			
+			if (newUrls != null && !newUrls.isEmpty())
+				this.listener.onDupRemoval(Thread.currentThread(), task, validTasks);
 			
 			//扩展点：task_sort 给任务排序
 			Collection<TaskSortPoint> taskSortPoints = task.site.taskSortPointImpls;
@@ -99,7 +105,7 @@ public class Spider implements Runnable{
 			}
 			
 			if (validTasks != null && !validTasks.isEmpty())
-				this.listener.onNewTasks(Thread.currentThread(), task.url, validTasks);
+				this.listener.onNewTasks(Thread.currentThread(), task, validTasks);
 			
 			Page page = result.getPage();
 			if (page == null) {
@@ -122,7 +128,7 @@ public class Spider implements Runnable{
 				return ;
 			}
 			
-			this.listener.onFetchPageOk(Thread.currentThread(), task, page);
+			this.listener.onTargetPage(Thread.currentThread(), task, page);
 			
 			//扩展点：parse 把已确认好的目标页面解析成为Map对象
 			Map<String, Object> model = null;

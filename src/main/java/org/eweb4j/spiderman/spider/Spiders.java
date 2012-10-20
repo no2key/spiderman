@@ -33,7 +33,6 @@ import org.eweb4j.spiderman.xml.Plugins;
 import org.eweb4j.spiderman.xml.Site;
 import org.eweb4j.spiderman.xml.Target;
 import org.eweb4j.util.CommonUtil;
-import org.eweb4j.util.FileUtil;
 import org.eweb4j.util.xml.BeanXMLUtil;
 import org.eweb4j.util.xml.XMLReader;
 import org.eweb4j.util.xml.XMLWriter;
@@ -50,7 +49,7 @@ public class Spiders {
 	public static void init(SpiderListener _listener) throws Exception{
 		listener = _listener;
 		
-		loadXmls();
+		loadPlugins();
 		initSites();
 		initPool();
 	}
@@ -66,9 +65,8 @@ public class Spiders {
 		pool.shutdownNow();
 	}
 	
-	private static void loadXmls() throws Exception{
-		String topPath = FileUtil.getTopClassPath(Spiders.class);
-		File siteFolder = new File(topPath + "conf/spider/WebSites");
+	private static void loadPlugins() throws Exception{
+		File siteFolder = new File(Settings.website_xml_folder());
 		if (!siteFolder.exists())
 			throw new Exception("can not found WebSites folder -> " + siteFolder.getAbsolutePath());
 		

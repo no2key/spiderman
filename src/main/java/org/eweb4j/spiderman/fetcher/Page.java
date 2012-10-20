@@ -1,6 +1,5 @@
 package org.eweb4j.spiderman.fetcher;
 
-import java.io.UnsupportedEncodingException;
 
 public class Page {
 
@@ -46,24 +45,21 @@ public class Page {
 	/**
 	 * Returns the content of this page in binary format.
 	 */
-	public byte[] getContentData() {
-		return contentData;
+//	public byte[] getContentData() {
+//		return contentData;
+//	}
+	
+	public void SetContent(String content){
+		this.content = content;
 	}
 	
 	public String getContent(){
-		if (this.contentData == null)
-			return null;
-		try {
-			return new String(this.contentData, "UTF-8");
-		} catch (UnsupportedEncodingException e) {
-		}
-		
-		return new String(this.contentData);
+		return this.content;
 	}
 
-	public void setContentData(byte[] contentData) {
-		this.contentData = contentData;
-	}
+//	public void setContentData(byte[] contentData) {
+//		this.contentData = contentData;
+//	}
 
 	/**
 	 * Returns the ContentType of this page. For example:
