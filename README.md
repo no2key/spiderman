@@ -16,7 +16,7 @@ Spiderman - 又一个Java网络蜘蛛
 不妨先快速试用一下：
 
 * 首先保证你的机器至少可以运行Java程序、也可以执行Maven命令
-* 这里有个案例程序[spiderman-sample](https://github.com/laiweiwei/spiderman-plugin)将其下载到本地，执行命令 mvn test
+* 这里有个案例程序[spiderman-sample](https://github.com/laiweiwei/spiderman-sample)将其下载到本地，执行命令 mvn test
 * Spiderman程序将会运行10秒钟，这个过程你应该能在控制台看到打印出来的从网易新闻爬回来的新闻数据
 * 这是抓取回来解析之后的其中一条新闻截图：[查看高清大图](http://dl.iteye.com/upload/picture/pic/119200/7d63d7fd-66a1-37cb-b079-790d8f73560e.png)
 * ![Screenshot](http://dl.iteye.com/upload/picture/pic/119200/7d63d7fd-66a1-37cb-b079-790d8f73560e.png)
