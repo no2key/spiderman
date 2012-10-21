@@ -220,7 +220,7 @@ public class Spiderman {
 			Task feedTask = new Task(new String(site.getUrl()), site, 10);
 			Spider feedSpider = new Spider();
 			feedSpider.init(feedTask, listener);
-			pool.execute(feedSpider);
+			feedSpider.run();
 			
 			final float times = CommonUtil.toSeconds(site.getSchedule()) * 1000;
 			long start = System.currentTimeMillis();
@@ -253,7 +253,7 @@ public class Spiderman {
 					long cost = System.currentTimeMillis() - start;
 					if (cost >= times){ 
 						// 运行种子任务
-						pool.execute(feedSpider);
+						feedSpider.run();
 						listener.onInfo(Thread.currentThread(), " shcedule FeedSpider per "+times+", now cost time ->"+cost);
 						start = System.currentTimeMillis();//重新计时
 					}

@@ -58,7 +58,18 @@
 			<version>4.4</version>
 		</dependency>
 	</dependencies>
-	
+	<repositories>
+		<repository>
+			<id>VelcroRelease</id>
+			<name>maven2.velcrosoft.net-releases</name>
+			<url>http://maven2.velcrosoft.net/velcro-releases-local</url>
+		</repository>
+		<repository>
+			<id>VelcroSnapshot</id>
+			<name>maven2.velcrosoft.net-snapshots</name>
+			<url>http://maven2.velcrosoft.net/velcro-snapshots-local</url>
+		</repository>
+	</repositories>
 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
