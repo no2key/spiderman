@@ -12,6 +12,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import org.eweb4j.config.EWeb4JConfig;
 import org.eweb4j.spiderman.infra.SpiderIOC;
 import org.eweb4j.spiderman.infra.SpiderIOCs;
 import org.eweb4j.spiderman.plugin.BeginPoint;
@@ -48,6 +49,9 @@ public class Spiderman {
 	
 	public static void init(SpiderListener _listener) throws Exception{
 		listener = _listener;
+		String err = EWeb4JConfig.start();
+		if (err != null)
+			throw new Exception(err);
 		
 		loadPlugins();
 		initSites();
