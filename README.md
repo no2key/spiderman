@@ -19,13 +19,7 @@ Spiderman - 又一个Java网络蜘蛛
 
     public class TestSpider {
         private final static Log log = LogFactory.getConfigLogger(TestSpider.class);
-    	@BeforeClass
-    	public static void prepare() throws Exception {
-            //Spiderman使用了EWeb4J框架的properties模块，因此需要启动它
-    		String err = EWeb4JConfig.start();
-    		if (err != null)
-    			throw new Exception(err);
-    	}
+   
     	@Test
     	public void test() throws Exception {
             // 初始化蜘蛛
