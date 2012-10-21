@@ -7,7 +7,10 @@ Spiderman - 又一个Java网络蜘蛛
 * Spiderman: 内核 [https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
 * Spiderman-Plugin: 插件 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
 
-主要特点是：
+这是一个小Demo，抓取网易新闻
+* Spiderman-Sample: 案例[spiderman-sample](https://github.com/laiweiwei/spiderman-sample)
+
+Spiderman的主要特点是：
 
 * 灵活、可扩展性强，微内核+插件式架构，Spiderman提供了多达 10 个扩展点。横跨蜘蛛线程的整个生命周期。
 * 通过简单的配置就可以将复杂的网页内容解析为自己需要的业务数据，无需编写一句代码
