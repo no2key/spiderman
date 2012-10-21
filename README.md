@@ -7,10 +7,16 @@ Spiderman - 又一个Java网络蜘蛛
 * Spiderman: 内核 [https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
 * Spiderman-Plugin: 插件 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
 
+主要特点是：
+
+* 灵活、可扩展性强，微内核+插件式架构，Spiderman提供了多大 10 个扩展点。围绕蜘蛛线程的完整生命周期。
+* 通过简单的配置就可以将复杂的网页内容解析为自己需要的业务数据，无需编写一句代码
+* 多线程
+
 不妨先快速试用一下：
 
 * 首先保证你的机器至少可以运行Java程序、也可以执行Maven命令
-* 这里有个案例程序[spiderman-sample](https://github.com/laiweiwei/spiderman-plugin)将其下载到本地，执行命令 mvn test
+* 这里有个案例程序[spiderman-sample](https://github.com/laiweiwei/spiderman-sample)将其下载到本地，执行命令 mvn test
 * Spiderman程序将会运行10秒钟，这个过程你应该能在控制台看到打印出来的从网易新闻爬回来的新闻数据
 * 这是抓取回来解析之后的其中一条新闻截图：[查看高清大图](http://dl.iteye.com/upload/picture/pic/119200/7d63d7fd-66a1-37cb-b079-790d8f73560e.png)
 * ![Screenshot](http://dl.iteye.com/upload/picture/pic/119200/7d63d7fd-66a1-37cb-b079-790d8f73560e.png)
@@ -19,13 +25,7 @@ Spiderman - 又一个Java网络蜘蛛
 
     public class TestSpider {
         private final static Log log = LogFactory.getConfigLogger(TestSpider.class);
-    	@BeforeClass
-    	public static void prepare() throws Exception {
-            //Spiderman使用了EWeb4J框架的properties模块，因此需要启动它
-    		String err = EWeb4JConfig.start();
-    		if (err != null)
-    			throw new Exception(err);
-    	}
+   
     	@Test
     	public void test() throws Exception {
             // 初始化蜘蛛
