@@ -13,12 +13,12 @@ Spiderman 是一个基于微内核+插件式架构的网络蜘蛛，它的目标
 
 *首先我们会有一个初始化配置文件spiderman.properties，它就放在${ClassPath}目录下
 <blockquote>
-#网站配置文件放置目录
-website.xml.folder=${ClassPath}/WebSites
-#http抓取失败重试次数
-http.fetch.retry=3
-#http连接超时，支持单位 s秒 m分 h时 d天，不写单位则表示s秒
-http.fetch.timeout=5s
+<p>#网站配置文件放置目录</p>
+<p>website.xml.folder=${ClassPath}/WebSites</p>
+<p>#http抓取失败重试次数</p>
+<p>http.fetch.retry=3</p>
+<p>#http连接超时，支持单位 s秒 m分 h时 d天，不写单位则表示s秒</p>
+<p>http.fetch.timeout=5s</p>
 </blockquote>
 
 
