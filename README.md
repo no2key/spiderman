@@ -1,11 +1,10 @@
 Spiderman - 又一个Java网络蜘蛛
 ==========================================
     Spiderman 是一个基于微内核+插件式架构的网络蜘蛛，它的目标是通过简单的方法就能将复杂的目标网页信息抓取并解析为自己所需要的业务数据。
-
+    
 它包含了两部分（二者缺一不可）：
-
-* Spiderman: 内核 [https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
-* Spiderman-Plugin: 插件 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
+* [内核https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
+* [插件https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
 
 主要特点
 ----------------------
