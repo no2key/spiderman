@@ -4,7 +4,7 @@ Spiderman - 又一个Java网络蜘蛛
 
 它包含了两部分（二者缺一不可）：
 
-* Spiderman: 内核 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin) 
+* Spiderman: 内核 [https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
 * Spiderman-Plugin: 插件 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
 
 不妨先快速试用一下：
@@ -28,6 +28,7 @@ Spiderman - 又一个Java网络蜘蛛
     	}
     	@Test
     	public void test() throws Exception {
+            // 初始化蜘蛛
     		Spiderman.init(new SpiderListener() {
     			public void onNewUrls(Thread thread, Task task, Collection<String> newUrls) {}
     			public void onDupRemoval(Thread currentThread, Task task, Collection<Task> validTasks) {}
@@ -42,11 +43,11 @@ Spiderman - 又一个Java网络蜘蛛
     			}
     		});
     
-    		// 启动爬虫
+    		// 启动蜘蛛
     		Spiderman.start();
     		//运行10s
     		Thread.sleep(CommonUtil.toSeconds("10s").longValue()*1000);
-    		// 关闭爬虫
+    		// 关闭蜘蛛
     		Spiderman.stop();
     	}
     }
