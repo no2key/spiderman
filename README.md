@@ -4,7 +4,7 @@ Spiderman - 又一个Java网络蜘蛛
 
 它包含了两部分（二者缺一不可）：
 
-* Spiderman: 内核 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin) 
+* Spiderman: 内核 [https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
 * Spiderman-Plugin: 插件 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
 
 不妨先快速试用一下：
