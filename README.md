@@ -7,6 +7,12 @@ Spiderman - 又一个Java网络蜘蛛
 * Spiderman: 内核 [https://github.com/laiweiwei/spiderman](https://github.com/laiweiwei/spiderman) 
 * Spiderman-Plugin: 插件 [https://github.com/laiweiwei/spiderman-plugin](https://github.com/laiweiwei/spiderman-plugin)
 
+主要特点
+----------------------
+    * 灵活、可扩展性强，微内核+插件式架构，Spiderman提供了多达 10 个扩展点。横跨蜘蛛线程的整个生命周期。
+    * 通过简单的配置就可以将复杂的网页内容解析为自己需要的业务数据，无需编写一句代码
+    * 多线程
+
 怎么使用？
 ----------
 * 首先，确定好你的目标网站以及目标网页（即某一类你想要获取数据的网页，例如网易新闻的新闻页面）
@@ -26,12 +32,6 @@ XPath获取技巧？
 * 这时候按住F12打开JS控制台，拖到底部，可以看到一串XPath内容
 * 记住，这个内容不是绝对适合Sipderman的，你可能还需要做些修改，因此，你最好还是去学习下XPath语法
 * 学习XPath语法的地方：[猛击这里](http://www.w3school.com.cn/xpath/index.asp)
-
-Spiderman的主要特点是
-----------------------
-    * 灵活、可扩展性强，微内核+插件式架构，Spiderman提供了多达 10 个扩展点。横跨蜘蛛线程的整个生命周期。
-    * 通过简单的配置就可以将复杂的网页内容解析为自己需要的业务数据，无需编写一句代码
-    * 多线程
 
 更多内容待增加......
 ----
